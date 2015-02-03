@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		099B1AFB1A7F671200B3335B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099B1AFA1A7F671200B3335B /* MapKit.framework */; };
 		09B145481A80C5AD0037F48B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B145471A80C5AD0037F48B /* ViewController.swift */; };
+		09B1454B1A80C8680037F48B /* AddFilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B1454A1A80C8680037F48B /* AddFilmViewController.swift */; };
+		09B1454D1A80D0000037F48B /* AddFilmCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B1454C1A80D0000037F48B /* AddFilmCoordinator.swift */; };
+		09B145501A80D1FF0037F48B /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B1454F1A80D1FF0037F48B /* Film.swift */; };
+		09B145521A80D9B00037F48B /* FilmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B145511A80D9B00037F48B /* FilmProvider.swift */; };
 		CCFDCFA9B93FA793477BA20C /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		D34425F81A6FEDB10031F02B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34425F71A6FEDB10031F02B /* AppDelegate.swift */; };
 		D34425FD1A6FEDB10031F02B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34425FB1A6FEDB10031F02B /* Main.storyboard */; };
@@ -33,6 +37,10 @@
 /* Begin PBXFileReference section */
 		099B1AFA1A7F671200B3335B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		09B145471A80C5AD0037F48B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Source/Main page/ViewController.swift"; sourceTree = "<group>"; };
+		09B1454A1A80C8680037F48B /* AddFilmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddFilmViewController.swift; path = "Source/Add film page/AddFilmViewController.swift"; sourceTree = "<group>"; };
+		09B1454C1A80D0000037F48B /* AddFilmCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddFilmCoordinator.swift; path = "Source/Add film page/AddFilmCoordinator.swift"; sourceTree = "<group>"; };
+		09B1454F1A80D1FF0037F48B /* Film.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Film.swift; path = Source/Model/Film.swift; sourceTree = "<group>"; };
+		09B145511A80D9B00037F48B /* FilmProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilmProvider.swift; path = "Source/Main page/FilmProvider.swift"; sourceTree = "<group>"; };
 		D34425F21A6FEDB10031F02B /* Realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Realm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D34425F61A6FEDB10031F02B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D34425F71A6FEDB10031F02B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Source/AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,8 +81,26 @@
 			isa = PBXGroup;
 			children = (
 				09B145471A80C5AD0037F48B /* ViewController.swift */,
+				09B145511A80D9B00037F48B /* FilmProvider.swift */,
 			);
 			name = "Main page";
+			sourceTree = "<group>";
+		};
+		09B145491A80C8270037F48B /* Add film page */ = {
+			isa = PBXGroup;
+			children = (
+				09B1454A1A80C8680037F48B /* AddFilmViewController.swift */,
+				09B1454C1A80D0000037F48B /* AddFilmCoordinator.swift */,
+			);
+			name = "Add film page";
+			sourceTree = "<group>";
+		};
+		09B1454E1A80D1A70037F48B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				09B1454F1A80D1FF0037F48B /* Film.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		4CEF3DD2AFAEEAFE588814ED /* Frameworks */ = {
@@ -109,6 +135,8 @@
 		D34425F41A6FEDB10031F02B /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				09B1454E1A80D1A70037F48B /* Model */,
+				09B145491A80C8270037F48B /* Add film page */,
 				09B145461A80C57F0037F48B /* Main page */,
 				D34426171A6FF0ED0031F02B /* RLMSupport.swift */,
 				D34425F71A6FEDB10031F02B /* AppDelegate.swift */,
@@ -245,9 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B1454D1A80D0000037F48B /* AddFilmCoordinator.swift in Sources */,
+				09B145501A80D1FF0037F48B /* Film.swift in Sources */,
 				09B145481A80C5AD0037F48B /* ViewController.swift in Sources */,
 				D34426181A6FF0ED0031F02B /* RLMSupport.swift in Sources */,
+				09B1454B1A80C8680037F48B /* AddFilmViewController.swift in Sources */,
 				D34425F81A6FEDB10031F02B /* AppDelegate.swift in Sources */,
+				09B145521A80D9B00037F48B /* FilmProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
